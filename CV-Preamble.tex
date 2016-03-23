@@ -10,21 +10,33 @@
 
 % Geometry package for page margins.
 \usepackage[
-left=0.70in,
-right=0.70in,
-top=0.70in,
-bottom=0.55in,
+left=0.60in,	% was 0.70in
+right=0.60in,	% was 0.70in
+top=0.35in,		% was 0.70in
+bottom=0.00in,
 nohead,
 includefoot]{geometry}
 
 % Hyphenation: Disabled.
 \usepackage[none]{hyphenat}
 
+\usepackage{setspace} % Used for changing line spacing properties
+
+%\usepackage{showframe}	% Render a frame marking the margins of the current document
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+
 % XeLaTeX packages.
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
 \usepackage{xunicode}
 \usepackage{xltxtra}
+
+\def\Csharp{C\#}
+
+\newcommand{\ts}{\textsuperscript}
+%\usepackage[super]{nth}
 
 % Font: Use "Tinos" as the main typeface (\textnormal{}, \normalfont).
 % The "Tinos" fonts are released under the Apache License Version 2.0,
@@ -69,11 +81,13 @@ BoldItalicFont=FreeSerifBoldItalic]
 \def\ps@plain{%
 \def\@oddhead{}%
 \def\@evenhead{}%
-\def\@oddfoot{\footnotesize\hfill{Page}~{\thepage}~of~\pageref{LastPage}\hfill}%
-\def\@evenfoot{\footnotesize\hfill{Page}~{\thepage}~of~\pageref{LastPage}\hfill}}
+%\def\@oddfoot{\footnotesize\hfill{Page}~{\thepage}~of~\pageref{LastPage}\hfill}%
+%\def\@evenfoot{\footnotesize\hfill{Page}~{\thepage}~of~\pageref{LastPage}\hfill}
+}
 \makeatother
 
-\pagestyle{plain}
+\pagestyle{empty} % was \pagestyle{plain}
+%\pagenumbering{gobble}
 
 % Paragraph style: No indentation.
 \setlength{\parindent}{0in}
@@ -82,8 +96,9 @@ BoldItalicFont=FreeSerifBoldItalic]
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 % Current date and time.
-\usepackage[yyyymmdd,24hr]{datetime}
-\renewcommand{\dateseparator}{-}
+%\usepackage[yyyymmdd,24hr]{datetime}
+\usepackage{datetime}
+\renewcommand{\dateseparator}{.}
 % {\today}~{\currenttime}
 
 % Abbreviations for months.
@@ -119,7 +134,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 \fi}
 
 % Select datestamp format.
-\def\DatestampFormatSelection{2}
+\def\DatestampFormatSelection{4}	% was 2
 
 % Datestamp format: {yyyy}{MM}{dd} ---> yyyy-MM-dd (e.g., 2010-12-31).
 \ifnum\DatestampFormatSelection=1
@@ -144,57 +159,77 @@ BoldItalicFont=FreeSerifBoldItalic]
 
 % Datestamp format: {yyyy}{MM}{dd} ---> yyyy (e.g., 2010).
 \ifnum\DatestampFormatSelection=4
-\newcommand{\DatestampYMD}[3]{#1}
-\newcommand{\DatestampYM}[2]{#1}
-\newcommand{\DatestampY}[1]{#1}
+\newcommand{\DatestampYMD}[3]{\fontsize{9}{10.3}\selectfont#1\normalsize}
+\newcommand{\DatestampYM}[2]{\fontsize{9}{10.3}\selectfont#1\normalsize}
+\newcommand{\DatestampY}[1]{\fontsize{9}{10.3}\selectfont#1\normalsize}
 \fi
+
+% New datestamp format: {yyyy}{MM}{dd} ---> MMM yyyy (e.g., Dec 2010).
+\newcommand{\DatestampYMDnew}[3]{\fontsize{9}{10.3}\selectfont\mbox{\ShortMonth{#2} #1}\normalsize}
+\newcommand{\DatestampYMnew}[2]{\fontsize{9}{10.3}\selectfont\mbox{\ShortMonth{#2} #1}\normalsize}
+\newcommand{\DatestampYnew}[1]{\fontsize{9}{10.3}\selectfont#1\normalsize}
+
+% Present
+
+\newcommand{\PresentDate}{\fontsize{9}{10.3}\selectfont Present\normalsize}
 
 % Macro: title (name).
 \renewcommand{\title}[1]{%
 \pdfbookmark[1]{#1}{#1}%
 \par\begin{center}%
-\par\begin{Huge}%
+\par\begin{LARGE}%
 \textbf{#1}%
-\par\end{Huge}%
+\par\end{LARGE}%
 \par\end{center}%
-\par\vspace{-1.75em}\par}
+\par\vspace{-2.0em}\par} % was -1.75em
 
 % Macro: subtitle (personal information below name).
 \newenvironment{subtitle}
 {\par\begin{center}%
-\par\begin{footnotesize}}
+\par\begin{footnotesize}\onehalfspacing}
 {\par\end{footnotesize}%
 \par\end{center}\par}
 
 % Macro: body (rest of the document).
 \newenvironment{body}
-{\par\vspace{-1em}\par
-\begin{longtable}{p{0.15\textwidth}p{0.80\textwidth}}}
+{\par\vspace{-2.1em}\par		% was -1em
+\begin{longtable}[c]{@{\hspace*{-0pt}}p{0.13\textwidth}p{0.85\textwidth}}}	% Also works without the asterisk
+%\begin{longtable}[c]{@{\hspace*{-10pt}}p{0.15\textwidth}p{0.83\textwidth}}}
 {\par\end{longtable}\par}
 
 % Macro: section (new section for Education, Research Experience, etc.).
-\renewcommand{\section}[3]{\\[-1em]\pdfbookmark[2]{#2}{#3}\\%
-{\fontsize{9pt}{11pt}\selectfont\bfseries\raggedright%
-\MakeUppercase{#1}}&}
+\renewcommand{\section}[3]{\\[-17pt]\pdfbookmark[2]{#2}{#3}\\%
+{\fontsize{11pt}{11pt}\selectfont\bfseries\raggedright%
+#1}&}
 
 % Macro: subsection.
-\renewcommand{\subsection}[3]{\par~\vskip-\baselineskip%
+\renewcommand{\subsection}[3]{\vspace{-14pt}% % was \par~\vskip-\baselineskip
 \pdfbookmark[3]{#2}{#3}\par%
-{\fontsize{8pt}{9.6pt}\selectfont\bfseries\raggedright%
-\MakeUppercase{#1}}%
+{\fontsize{9pt}{9.6pt}\selectfont\bfseries\raggedright%
+#1}%	% was \MakeUppercase{#1}
 \vspace{0.1em}}
 
 % Macro: BigEntryGap (big vertical gap between entries in the same section).
-\newcommand{\BigEntryGap}{\\[-0.5em]~&}
-\newcommand{\BigEntryGapNoBreak}{\par\vspace{0.7em}\par}
+\newcommand{\BigEntryGap}{\\[-0.7em]~&}	% was -0.5em
+\newcommand{\BigEntryGapNoBreak}{\par\vspace{0.4em}\par}	% was 0.7em
 
 % Macro: EntryGap (vertical gap between entries in the same section).
-\newcommand{\EntryGap}{\\[-0.8em]~&}
-\newcommand{\EntryGapNoBreak}{\par\vspace{0.4em}\par}
+\newcommand{\EntryGap}{\\[-1em]~&}	% was -0.8em
+\newcommand{\EntryGapNoBreak}{\par\vspace{0.1em}\par}	% was 0.4em
+
+% Macro: itemslist (Used to describe headings that don't use details)
+\newenvironment{itemslist}
+{\vspace*{-2.1em}\par\begingroup\fontsize{10}{10.3}\selectfont\begin{itemize}\setlength{\itemsep}{3pt}\setlength{\parskip}{0cm}}
+{\end{itemize}\par\endgroup\par\vspace{-1.1em}}
 
 % Macro: detail (text in smaller font under an entry).
 \newenvironment{detail}
-{\par\begingroup\fontsize{8.6}{10.3}\selectfont}
+{\vspace*{-0.8em}\par\setlength{\rightskip}{2cm}\noindent\begingroup\fontsize{9}{10.5}\selectfont}
+{\par\endgroup\par}
+
+% Macro: detail with no sub-heading (text in smaller font under main heading)
+\newenvironment{detailwithoutsubheading}
+{\par\setlength{\rightskip}{2cm}\begingroup\fontsize{9}{10.5}\selectfont}
 {\par\endgroup\par}
 
 % Macro: BulletItem.
