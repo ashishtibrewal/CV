@@ -36,6 +36,7 @@
 % CV Info (to be customized).
 \newcommand{\CVTitle}{Ashish Tibrewal's CV}
 \newcommand{\CVNote}{CV updated as of {\today}}
+\newcommand{\CVReferences}{References available on request}
 
 % PDF settings and properties.
 \hypersetup{
@@ -74,12 +75,12 @@ breaklinks}
 \faEnvelope\,
 \href{mailto:ashish.tibrewal@hotmail.com}
 {ashish.tibrewal@hotmail.com}
-\quad \faPhone\,
+\hfill \faPhone\,
 +44\,(0)\,7927 707009
-\quad \faLinkedinSquare\,
+\hfill \faLinkedinSquare\,
 \href{https://www.linkedin.com/in/tibrewalashish}
 {https://www.linkedin.com/in/tibrewalashish}
-\quad \faBriefcase\,
+\hfill \faBriefcase\,
 \href{https://ashishtibrewal.github.io}
 {https://ashishtibrewal.github.io}
 \vspace{8pt}
@@ -114,9 +115,15 @@ Degree Classification: Upper Second Class Honours (2:1)
 %\BulletItem
 %Degree Class (Predicted): First Class
 \BulletItem
-Modules (1\ts{st} - 3\ts{rd} Year): Procedural Programming, Principles of Programming, Theory of Computation, OOP \& Functional Programming, Computer Architecture, Microelectronics, Linear Circuits, Electronics, Engineering Mathematics, Discrete Mathematics, Data Structures \& Algorithms, Symbols-Patterns \& Signals, Language Engineering, Digital Systems, Signals \& Systems, Communications, Control Systems, Digital Design, Professional Studies, High Performance Computing, Digital Filters \& Spectral Analysis, Mobile Communications, Networks \& Protocols, Industrial Research Project
+Core Modules: Principles of Programming, Object Oriented \& Functional Programming, Engineering Mathematics, Discrete Mathematics, Data Structures \& Algorithms, Digital Systems, High Performance Computing, Networks \& Protocols, Advanced Computer Architecture, VLSI Design
 \BulletItem
-Modules (4\ts{th} Year): Advanced Computer Architecture, Interactive Devices, Robotic Systems, VLSI Design, Advanced DSP \& FPGA, Innovation - Entrepreneurship \& Enterprise, Biosensors, Device Interconnect, Master's Project - Disaggregated Data Centres: Simulation \& Analysis of Resource Allocation Algorithms
+Research Projects: Feedback Control \& User Interface Design for a Low Cost 3D Scanner, Disaggregated Data Centres -- Simulation \& Analysis of Resource Allocation Algorithms
+\BulletItem
+Group Projects: Digital Design -- Peak Detector Design, Communications -- Wireless Modem Design, Professional Studies -- General Electric Audit Report, Interactive Devices -- Using Acoustic Sensing to Create a Touch Sensitive Surface, Robotic Systems -- Development of a Localistaion System
+%\BulletItem
+%Modules (1\ts{st} - 3\ts{rd} Year): Procedural Programming, Principles of Programming, Theory of Computation, OOP \& Functional Programming, Computer Architecture, Microelectronics, Linear Circuits, Electronics, Engineering Mathematics, Discrete Mathematics, Data Structures \& Algorithms, Symbols-Patterns \& Signals, Language Engineering, Digital Systems, Signals \& Systems, Communications, Control Systems, Digital Design, Professional Studies, High Performance Computing, Digital Filters \& Spectral Analysis, Mobile Communications, Networks \& Protocols, Industrial Research Project
+%\BulletItem
+%Modules (4\ts{th} Year): Advanced Computer Architecture, Interactive Devices, Robotic Systems, VLSI Design, Advanced DSP \& FPGA, Innovation - Entrepreneurship \& Enterprise, Biosensors, Device Interconnect, Master's Project - Disaggregated Data Centres: Simulation \& Analysis of Resource Allocation Algorithms
 \end{detail}
 
 \BigEntryGapNoBreak
@@ -524,13 +531,32 @@ Represented \textit{`Assam'} at the \textit{Junior National Squash Championships
 {Programming:}
 {Programming}
 {PDFsubsec:Programming}
-C, \Csharp, Java, Haskell, HTML, CSS, JavaScript, XML, SQL, Unix shell scripting (Bash), VHDL, Verilog, {\LaTeX}, MATLAB, OpenMP, OpenMPI, OpenCL, OpenGL, EmguCV (OpenCV), Assembly
+C, C++, \Csharp, Java, MATLAB, Haskell, SQL, VHDL, Verilog
+\vspace{15pt}
+\subsection
+{Scripting/Markup:}
+{Scripting/Markup}
+{PDFsubsec:Scripting/Markup}
+HTML, CSS, JavaScript, Bash, Markdown, YAML, XML, \LaTeX
 \vspace{15pt}
 \subsection
 {Technologies:}
 {Technologies}
 {PDFsubsec:Technologies}
-Git, Vim, ActiveHDL, ModelSim, Quartus II, Altium Designer, Cadence, Microsoft Visual Studio, .NET Framework, Microsoft Office Suite, Adobe Photoshop, UML, Jekyll, CCS, Eclipse
+%Git, Vim, ActiveHDL, ModelSim, Quartus II, Altium Designer, Cadence, Microsoft Visual Studio, .NET Framework, Microsoft Office Suite, Adobe Photoshop, UML, Jekyll, CCS, Eclipse
+.NET Framework, Jekyll
+\vspace{15pt}
+\subsection
+{Open Source:}
+{Open Source}
+{PDFsubsec:Open Source}
+OpenMP, OpenMPI, OpenCL, OpenGL, OpenCV (EmguCV)
+\vspace{15pt}
+\subsection
+{Tools:}
+{Tools}
+{PDFsubsec:Tools}
+Git, Vim, Bash, Gprof, VTune, Make, GDB, GCC, Valgrind, Bash, Visual Studio, MS Office Suite
 \vspace{15pt}
 \subsection
 {Platforms:}
@@ -594,12 +620,12 @@ Member of \href{http://www.assamvalleyschool.com}{The Assam Valley School}'s \te
 %% REFERENCES %%
 %%%%%%%%%%%%%%%%
 
-\section
-{References}
-{References}
-{PDF:References}
-
-Available on request
+% \section
+% {References}
+% {References}
+% {PDF:References}
+%
+% Available on request
 % \textbf{Professor Jonathan Public}
 % \par
 % Professor of Geology and Mechanical Engineering
@@ -631,17 +657,22 @@ Available on request
 % +1\,(555)\,333-3333
 % \end{detail}
 
+\end{body}
 %%%%%%%%%%%
 % CV NOTE %
 %%%%%%%%%%%
 %
-\begin{flushright}
-\scriptsize%
-\vspace{-5pt}
-[\textit{\CVNote}]%
-\hspace{2.0mm}\null
-\end{flushright}
+% \begin{flushright}
+% \scriptsize%
+% \vspace{-5pt}
+% [\textit{\CVNote}]%
+% \hspace{2.0mm}\null
+% \end{flushright}
 
-\end{body}
+\footnotesize % To make text/font size smaller
+\textit{\CVReferences} % Print reference(s) information
+\hfill % Horizontal fill to right align following text
+[\textit{\CVNote}] % Print CV note
+
 \label{LastPage} % was \label{LastPage}~ % The tilde (i.e. ~ generates a non-breaking space)
 \end{document}
