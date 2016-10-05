@@ -10,12 +10,12 @@
 
 % Geometry package for page margins.
 \usepackage[
-left=0.60in,	% was 0.70in
-right=0.60in,	% was 0.70in
+left=0.50in,	% was 0.70in
+right=0.50in,	% was 0.70in
 top=0.35in,		% was 0.70in
 bottom=0.00in,
 nohead,
-includefoot]{geometry}
+includefoot]{geometry} % Use the showframe option to show page borders/margins
 
 % Hyphenation: Disabled.
 \usepackage[none]{hyphenat}
@@ -194,7 +194,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 % Macro: body (rest of the document).
 \newenvironment{body}
 {\par\vspace{-2.1em}\par		% was -1em
-\begin{longtable}[c]{@{\hspace*{-0pt}}p{0.13\textwidth}p{0.85\textwidth}}}	% Also works without the asterisk
+\begin{longtable}[c]{@{\hspace*{-0pt}}p{0.13\textwidth}p{0.825\textwidth}}}	% Also works without the asterisk
 %\begin{longtable}[c]{@{\hspace*{-10pt}}p{0.15\textwidth}p{0.83\textwidth}}}
 {\par\end{longtable}\par}
 
