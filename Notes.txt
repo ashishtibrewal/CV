@@ -11,6 +11,7 @@ TODO
 9. Improve voluntary work section - Add few bullet points
 10. Check entire document for hyperlinks - if not present, insert hyperlinks
 11. Maybe have two different CVs (single page and double page) - Use two different git branches
+12. Update achievements section - Make items more succinct (Maybe remove bullet points to make alignment more uniform across the entire document and increasing spacing between each entry)
 
 Test driven development (TDD), Software documentation, Agile, Scrum, Build automation, Github, Debugging, Profiling, Continuous Integration, Web development
 
