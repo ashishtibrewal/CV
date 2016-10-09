@@ -3,7 +3,7 @@ TODO
 1. Modify work ex - Brief about the company and important bullet points
 2. Reduce education (Only insert core modules)
 3. Update education section -> Reduce modules listed and add subsection for (research) projects and group projects
-4. Create profile
+4. Create profile (Refer to link below)
 5. Add pair programming to list of skills
 6. Maybe add platforms subsection (OS X, Linux, Unix, MS Windows)
 7. Update linkedin link
@@ -12,6 +12,8 @@ TODO
 10. Check entire document for hyperlinks - if not present, insert hyperlinks
 11. Maybe have two different CVs (single page and double page) - Use two different git branches
 12. Update achievements section - Make items more succinct (Maybe remove bullet points to make alignment more uniform across the entire document and increasing spacing between each entry)
+13. Verify against CV checklist (See link below)
+14. Change size of CVnote from footnotesize to small
 
 Test driven development (TDD), Software documentation, Agile, Scrum, Build automation, Github, Debugging, Profiling, Continuous Integration, Web development
 
@@ -31,9 +33,12 @@ Work Experience and Positions of Responsibility -> Professional Experience
 Programming -> Software development
 Skills (Subset) -> Technical proficiencies
 Head -> Captain/Team Leader
+Research projects -> Individual research projects
 
 
 OTHERS
 ------
 Refer to https://www.pongoresume.com/articles/447/how-to-answer-3-common-interview-questions.cfm
 Refer to http://uk.businessinsider.com/resume-expert-reveals-perfect-resume-looks-like-2016-4
+Refer to https://www.kent.ac.uk/careers/cv/cv-checklist.htm (For CV checklist)
+Refer to https://www.kent.ac.uk/careers/cv/CVProfiles.htm (For CV profiles)
