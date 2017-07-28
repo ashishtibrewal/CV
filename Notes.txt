@@ -2,7 +2,7 @@ TODO
 ----
 1. Modify work ex - Brief about the company and important bullet points
 2. Reduce education (Only insert core modules)
-3. Update education section -> Reduce modules listed and add subsection for (research) projects and group projects
+3. Update education section -> Reduce modules listed and add subsection for (research) projects and group projects - Include one-line descriptions for each project listed
 4. Create profile (Refer to link below)
 5. Add pair programming to list of skills
 6. Maybe add platforms subsection (OS X, Linux, Unix, MS Windows)
@@ -14,6 +14,8 @@ TODO
 12. Update achievements section - Make items more succinct (Maybe remove bullet points to make alignment more uniform across the entire document and increasing spacing between each entry)
 13. Verify against CV checklist (See link below)
 14. Change size of CVnote from footnotesize to small
+15. Add UML to list of skills
+16. Improve list of interests and remove music from the list
 
 Test driven development (TDD), Software documentation, Agile, Scrum, Build automation, Github, Debugging, Profiling, Continuous Integration, Web development
 
