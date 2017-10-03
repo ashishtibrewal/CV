@@ -36,7 +36,13 @@
 % CV Info (to be customized).
 \newcommand{\CVTitle}{Ashish Tibrewal's CV}
 \newcommand{\CVReferences}{References available on request}
-\newcommand{\CVNote}{\CVReferences\ -- CV updated as of {\today}}
+% Check if the company variable has been defined when the executable, i.e.
+% XeLaTeX, that compiles this source file is run/executed
+\ifdefined\company
+  \newcommand{\CVNote}{\CVReferences\ -- CV updated as of {\today} for \company}
+\else
+  \newcommand{\CVNote}{\CVReferences\ -- CV updated as of {\today}}
+\fi
 
 % PDF settings and properties.
 \hypersetup{
