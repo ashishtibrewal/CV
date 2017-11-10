@@ -3,10 +3,11 @@ TODO
 1. Modify work ex - Brief about the company and important bullet points
 2. Reduce education (Only insert core modules)
 3. Update education section -> Reduce modules listed and add subsection for (research) projects and group projects - Include one-line descriptions for each project listed
-4. Create profile (Refer to link below)
+4. Create profile (Refer to link below) but this is not mandatory as a lot of
+recruiters suggest that summaries aren't helpful and are always overbloated
 5. Add pair programming to list of skills
 6. Maybe add platforms subsection (OS X, Linux, Unix, MS Windows)
-7. Update linkedin link
+7. Update LinkedIn link
 8. Remove line for references available on request, instead have it in the footnote
 9. Improve voluntary work section - Add few bullet points
 10. Check entire document for hyperlinks - if not present, insert hyperlinks
@@ -16,6 +17,9 @@ TODO
 14. Change size of CVnote from footnotesize to small
 15. Add UML to list of skills
 16. Improve list of interests and remove music from the list
+17. Remove technologies/frameworks subsection and instead add a subsection
+called skills that includes generic/high-level skilss such as web development,
+testing, CI/CD, agile dev, devops, etc.
 
 Test driven development (TDD), Software documentation, Agile, Scrum, Build automation, Github, Debugging, Profiling, Continuous Integration, Web development
 
