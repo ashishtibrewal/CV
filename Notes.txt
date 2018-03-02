@@ -18,8 +18,18 @@ recruiters suggest that summaries aren't helpful and are always overbloated
 15. Add UML to list of skills
 16. Improve list of interests and remove music from the list
 17. Remove technologies/frameworks subsection and instead add a subsection
-called skills that includes generic/high-level skilss such as web development,
-testing, CI/CD, agile dev, devops, etc.
+called skills that includes generic/high-level skills such as web development,
+testing, CI/CD, agile dev, DevOps, etc.
+18. Have a projects section where the subsections would include Course Projects
+and Independent Projects (Mention what the project was about, what
+technologies/languages were used, team or individual project)
+19. Have succinct bullet points for works experience that specify
+responsibilities, tasks, acomplishments, and results. Try and quantify, i.e. try
+and measure, all results, eg. Reduced object rendering time by 75% by applying
+Floyd’s algorithm, leading to a 10% reduction in system boot time.
+20. Add level of experience (in brackets) to each programming language or
+technology. Use words such as Expert, Proficient, and Prior experience (OR
+Daily, Ocassionally, and Rusty)
 
 Test driven development (TDD), Software documentation, Agile, Scrum, Build automation, Github, Debugging, Profiling, Continuous Integration, Web development
 
@@ -48,3 +58,4 @@ Refer to https://www.pongoresume.com/articles/447/how-to-answer-3-common-intervi
 Refer to http://uk.businessinsider.com/resume-expert-reveals-perfect-resume-looks-like-2016-4
 Refer to https://www.kent.ac.uk/careers/cv/cv-checklist.htm (For CV checklist)
 Refer to https://www.kent.ac.uk/careers/cv/CVProfiles.htm (For CV profiles)
+Refer to http://www.businessinsider.com/this-rsum-landed-me-interviews-at-google-buzzfeed-and-more-than-20-top-startups-2016-10?IR=T
